@@ -3,9 +3,7 @@
 import os
 import glob
 
-# Generate index.html in docs/ listing all .whl files
-
-os.makedirs('docs', exist_ok=True)
+# Generate index.html in root listing all .whl files
 
 html_content = '''<!DOCTYPE html>
 <html lang="en">
@@ -24,13 +22,13 @@ whl_files = glob.glob('**/*.whl', recursive=True)
 
 for whl_file in whl_files:
     filename = os.path.basename(whl_file)
-    # Since index.html is in docs/, link to ../filename
-    html_content += f'        <li><a href="../{filename}">{filename}</a></li>\n'
+    # Since index.html is in root, link to filename
+    html_content += f'        <li><a href="{filename}">{filename}</a></li>\n'
 
 html_content += '''    </ul>
 </body>
 </html>
 '''
 
-with open('docs/index.html', 'w') as f:
+with open('index.html', 'w') as f:
     f.write(html_content)
