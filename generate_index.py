@@ -14,6 +14,7 @@ html_content = '''<!DOCTYPE html>
 </head>
 <body>
     <h1>Available Wheels</h1>
+    <p><a href="README.md">See README for details</a></p>
     <ul>
 '''
 
