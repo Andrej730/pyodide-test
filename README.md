@@ -4,7 +4,7 @@ This repository hosts WebAssembly (WASM) wheels for the [ifcopenshell](https://g
 
 ## Purpose
 
-The wheels enable installing and using ifcopenshell in Pyodide-based environments, such as web browsers, for processing Industry Foundation Classes (IFC) files without server-side computation.
+The idea is to give a common source so wheels would be installable from some publicly available URL, instead of uploading it to the website itself.
 
 ## Available Wheels
 
