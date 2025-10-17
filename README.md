@@ -4,7 +4,7 @@ This repository hosts WebAssembly (WASM) wheels for the [ifcopenshell](https://g
 
 ## Purpose
 
-The idea is to give a common source so wheels would be installable from some publicly available URL, instead of uploading it to the website itself.
+The purpose of this repository is to provide a centralized, publicly accessible source for ifcopenshell wheels, allowing users to install them via URL without needing to host the files themselves.
 
 ## Available Wheels
 
