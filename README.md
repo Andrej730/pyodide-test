@@ -21,10 +21,10 @@ await micropip.install("https://andrej730.github.io/pyodide-test/ifcopenshell-0.
 
 Replace the URL with the desired wheel filename from the index.
 
-## Source
+## Alternatives Considered
 
-Wheels are sourced from the [IfcOpenShell/wasm-wheels](https://github.com/IfcOpenShell/wasm-wheels) repository.
+Other hosting options were considered:
+- Raw files from GitHub repository commits: Do not serve proper CORS headers.
+- Files in GitHub Releases: Do not serve proper CORS headers.
 
-## GitHub Pages
-
-This repository uses GitHub Pages to serve the wheels with proper CORS headers, ensuring compatibility with browser-based installations.
+GitHub Pages was chosen as it automatically includes Access-Control-Allow-Origin: * headers, enabling cross-origin requests required for Pyodide installations.
