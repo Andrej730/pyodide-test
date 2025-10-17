@@ -12,10 +12,8 @@ jobs:
     - uses: actions/checkout@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-    - name: Make script executable
-      run: chmod +x generate_index.sh
     - name: Generate index.html
-      run: bash generate_index.sh
+      run: python generate_index.py
     - name: Commit and push if changed
       run: |
         git config --local user.email "action@github.com"
