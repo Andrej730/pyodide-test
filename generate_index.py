@@ -17,8 +17,8 @@ html_content = '''<!DOCTYPE html>
     <ul>
 '''
 
-# Find all .whl files in the repo
-whl_files = glob.glob('**/*.whl', recursive=True)
+# Find all .whl files in the repo, sorted descending
+whl_files = sorted(glob.glob('**/*.whl', recursive=True), reverse=True)
 
 for whl_file in whl_files:
     filename = os.path.basename(whl_file)
